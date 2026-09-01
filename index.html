@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barretos Arena Digital - Portfólio de Rodeio</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <!-- Fontes rústicas e de impacto para o clima sertanejo -->
+    <link href="https://googleapis.com/css2?family=Rye&family=Russo+One&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="portfolio-header">
+        <!-- Ícones temáticos e Frase Principal voltada para contagem -->
+        <div class="Festa do Peão">Festa do Peão de Boiadeiro</div>
+        <h1>Contagem Regressiva para o Rodeio de Barretos</h1>
+        <p>Painel de Controle da Maior Festa de Peão da América Latina 🐂</p>
+    </header>
+
+    <main class="portfolio-container">
+        <!-- Abas Estilizadas com o Clima de Barretos -->
+        <nav class="tabs-nav">
+            <button class="tab-btn active" data-tab="tab-botao">1. Laço de Ouro</button>
+            <button class="tab-btn" data-tab="tab-contador">2. Contador de Montarias</button>
+            <button class="tab-btn" data-tab="tab-modal">3. Rancho do Peão</button>
+            <button class="tab-btn" data-tab="tab-galeria">4. Fotos da Arena</button>
+        </nav>
+
+        <div class="tabs-content">
+            
+            <!-- ABA 1: BOTÃO HOVER DINÂMICO -->
+            <section id="tab-botao" class="tab-panel active">
+                <h2>Energia da Porteira</h2>
+                <p class="description">Passe o mouse para abrir o brete e soltar a adrenalina na arena de Barretos.</p>
+                <div class="demo-box">
+                    <button id="js-hover-btn" class="interactive-btn">Segura Peão! 👢</button>
+                </div>
+            </section>
+
+            <!-- ABA 2: CONTADOR DE CLIQUES EM TEMPO REAL -->
+            <section id="tab-contador" class="tab-panel">
+                <h2>Painel dos 8 Segundos</h2>
+                <p class="description">Monitore e conte quantas montarias de sucesso pararam no touro na arena principal.</p>
+                <div class="demo-box">
+                    <div class="counter-display" id="counter-value">0</div>
+                    <button id="js-count-btn" class="interactive-btn btn-counter">Registrar Parada 🐂</button>
+                </div>
+            </section>
+
+            <!-- ABA 3: MODAL DE AVISO CONTEXTUAL -->
+            <section id="tab-modal" class="tab-panel">
+                <h2>Alerta dos Comissários</h2>
+                <p class="description">Abra o pergaminho oficial para ver as regras da queima do alho.</p>
+                <div class="demo-box">
+                    <button id="js-open-modal" class="interactive-btn btn-modal">Regras do Rancho</button>
+                </div>
+            </section>
+
+            <!-- ABA 4: GALERIA DE IMAGENS COUNTRY -->
+            <section id="tab-galeria" class="tab-panel">
+                <h2>Registros de Barretos</h2>
+                <p class="description">Clique nas fotos para expandir os melhores momentos da Festa do Peão.</p>
+            <div class="gallery-grid">
+                <img src="imagens/dji-0088.jpg" alt="Arena de Barretos" class="gallery-thumb">
+                <img src="imagens/Noturna.jpg" alt="Festa do Peão Noturna" class="gallery-thumb">
+                <img src="imagens/Queima do Alho.jpg" alt="Queima do Alho" class="gallery-thumb">
+            </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Modal Temático Oculto -->
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-box">
+            <h3>📯 Aviso Importante da Queima do Alho!</h3>
+            <p>O tradicional concurso culinário já vai começar no Rancho do Peão. Preparem os fogões a lenha, o arroz carreteiro e o feijão gordo!</p>
+            <p class="dismiss-notice">Clique fora deste pergaminho para voltar à arena principal.</p>
+        </div>
+    </div>
+
+    <!-- Lightbox de Ampliação Rústico -->
+    <div id="gallery-lightbox" class="lightbox-overlay">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Imagem Expandida">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
